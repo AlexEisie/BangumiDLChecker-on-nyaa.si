@@ -1,4 +1,23 @@
-这是一个自动下载番剧的程序
-请确保目录中有：webclawser.py htmlprocessor config.cfg downloadedlist.txt
-使用时配置config.cfg(按照已存在的例子进行操作)
-然后运行htmlprocessor
+这是一个在nyaa.si自动下载番剧的程序（LINUX)
+依赖程序：python3 wget aria2(aria2c) rclone(已经配置好的)
+请确保目录中有：webclawser.py htmlprocessor.cpp config.cfg downloadedlist.txt
+
+**使用教程：
+1.编辑config.cfg
+	按照每行格式为：[名称(随便取)]|[nyaa.si链接]|[rclone上传目录]
+	也就是说需要用"|"字符来分割
+2.编译运行htmlprocessor
+	g++ -o htmlprocessor htmlprocessor.html
+	./htmlprocessor
+
+***注意事项：
+爬取的页面文件保存到html文件夹中,下载的种子文件保存到torrent文件夹中(程序不会自动清除，如果体积过大请手动删除torrent目录)，下载的番剧暂时存在downloads中并且上传到预设目录。
+
+程序每6分钟运行一次，所以建议在screen中运行然后置之不理
+如果需要编辑config.cfg,建议先ctrl+C停止程序再编辑避免bug
+
+为了避免种子卡下载，种子下载0速度5分钟后会结束任务（没写报错QAQ）！
+
+config.cfg编辑请在linux下进行，在windows下编辑会出现行末符异常问题
+
+头一次写的完整项目（屎山），敬请大佬优化和添加新功能（自动重命名啥的）

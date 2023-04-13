@@ -159,7 +159,7 @@ int main()
 			wget_command = "wget " + queue[dlnum] + " -P ./torrent -nv";
 			system(wget_command.c_str());
 			queue[dlnum].erase(0,queue[dlnum].find_last_of("/")+1);		//去除前缀
-			aria2c_command = "aria2c ./torrent/" + queue[dlnum] + " --dir ./downloads --seed-time 0";
+			aria2c_command = "aria2c ./torrent/" + queue[dlnum] + " --dir ./downloads --seed-time 0 --bt-stop-timeout 300";
 			system(aria2c_command.c_str());
 			dlnum++;
 		}
