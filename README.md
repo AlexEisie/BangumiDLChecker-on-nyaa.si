@@ -1,1 +1,0 @@
-# BangumiDLChecker-on-nyaa.si
