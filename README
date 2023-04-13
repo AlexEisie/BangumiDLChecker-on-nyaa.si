@@ -1,0 +1,4 @@
+这是一个自动下载番剧的程序
+请确保目录中有：webclawser.py htmlprocessor config.cfg downloadedlist.txt
+使用时配置config.cfg(按照已存在的例子进行操作)
+然后运行htmlprocessor
