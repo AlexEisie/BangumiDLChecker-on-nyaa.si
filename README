@@ -1,3 +1,5 @@
+***这是一个过时的项目，请访问https://github.com/AlexEisie/BangumiDL***
+
 这是一个在nyaa.si自动下载番剧的程序（LINUX)
 依赖程序：python3 wget aria2(aria2c) rclone(已经配置好的)
 请确保目录中有：webclawser.py htmlprocessor.cpp config.cfg downloadedlist.txt
